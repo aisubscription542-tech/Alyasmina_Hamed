@@ -426,6 +426,46 @@ html[dir="rtl"] .mix i{transform-origin:right}
 .bchips span.b.star{border-color:var(--iris);color:var(--lilac)}
 @media (max-width:760px){.dir-row{grid-template-columns:1fr;gap:14px}}
 
+
+/* easy list results */
+.res.alt .res-cols{grid-template-columns:1fr 1fr;align-items:start}
+.res.alt .mgrid{grid-template-columns:repeat(2,1fr)}
+.stack{display:grid;gap:12px}
+.stack .post{background:#fff}
+.callouts{display:grid;gap:14px;margin-top:18px}
+.callouts p{font-size:14px;color:var(--mist);border-inline-start:2px solid var(--iris);padding-inline-start:12px}
+.callouts b{color:var(--paper);font-weight:600}
+@media (max-width:900px){.res.alt .res-cols{grid-template-columns:1fr}}
+
+
+/* mawaeidk results */
+.res.big .bighead{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:end}
+.res.big .bighead>*{min-width:0}
+.res.big .hero-n{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(64px,9vw,120px);line-height:.9;color:var(--lilac);direction:ltr;unicode-bidi:isolate}
+.res.big .hero-n small{display:block;font-family:var(--body);font-size:14px;color:var(--mist);margin-top:12px;font-weight:400}
+.res.big .mgrid{grid-template-columns:repeat(4,1fr)}
+.shots3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.shots3 .post{background:#fff}
+@media (max-width:900px){.res.big .bighead{grid-template-columns:1fr}.res.big .mgrid{grid-template-columns:repeat(2,1fr)!important}.shots3{grid-template-columns:1fr}}
+
+
+/* mawaeidk 3-platform */
+.plats{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px}
+.plats>div{min-width:0;background:rgba(10,14,26,.45);border:1px solid var(--line);border-radius:14px;padding:18px}
+.plats .pn{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(36px,4vw,52px);line-height:1;direction:ltr;unicode-bidi:isolate;color:var(--paper)}
+html[dir="rtl"] .plats .pn{text-align:right}
+.plats .pl{font-size:13px;color:var(--mist);margin-top:6px}
+.plats .rows{display:grid;gap:8px;margin-top:16px;font-size:14px}
+.plats .rows div{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:8px}
+.plats .rows b{font-weight:600;direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+.plats .rows span{color:var(--mist)}
+.proofgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.proofgrid .post{background:#fff}
+.proofgrid .wide{grid-column:1/-1}
+.proofgrid .span2{grid-column:span 2}
+@media (max-width:900px){.proofgrid .span2{grid-column:auto}}
+@media (max-width:900px){.plats,.proofgrid{grid-template-columns:1fr}}
+
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:rgba(6,8,16,.92);display:grid;place-items:center;padding:max(24px,env(safe-area-inset-top,0px)) 24px 24px;cursor:zoom-out}
 .lb[hidden]{display:none}
@@ -480,7 +520,7 @@ html[dir="rtl"] .mix i{transform-origin:right}
       <div class="stat"><b class="num" data-count="40" data-pre="30–">30–40</b><span class="en">accounts managed at the same time</span><span class="ar">حساب بديرهم في نفس الوقت</span><small class="en">10–14 clients · Heen Agency</small><small class="ar">10–14 عميل · وكالة هين</small></div>
       <div class="stat"><b class="num" data-count="35" data-pre="+25–" data-suf="%">+25–35%</b><span class="en">reach growth in 2–3 months</span><span class="ar">زيادة في الوصول خلال 2–3 شهور</span><small>AK Media</small></div>
       <div class="stat"><b class="num" data-count="75" data-suf="+">75+</b><span class="en">brands in my content-plan archive</span><span class="ar">براند في أرشيف خطط المحتوى بتاعي</span><small class="en">Egypt, Saudi Arabia, Oman, GCC</small><small class="ar">مصر، السعودية، عُمان، الخليج</small></div>
-      <div class="stat"><b class="num hi" data-count="57.7" data-dec="1" data-suf="K">57.7K</b><span class="en">Facebook views in 3 months, from zero</span><span class="ar">مشاهدة على فيسبوك في 3 شهور، من الصفر</span><small class="en">Deraya · 760 new follows</small><small class="ar">دِراية · 760 متابعة جديدة</small></div>
+      <div class="stat"><b class="num hi" data-count="2.29" data-dec="2" data-suf="M">2.29M</b><span class="en">views in a brand's first 3 months</span><span class="ar">مشاهدة في أول 3 شهور لبراند</span><small class="en">Mawaeidk · Facebook, Instagram, TikTok</small><small class="ar">مواعيدك · فيسبوك، إنستجرام، تيك توك</small></div>
     </div>
   </div>
 
@@ -574,7 +614,7 @@ html[dir="rtl"] .mix i{transform-origin:right}
           <div class="idx"><b>02</b><span>Tasweeq</span><span class="en">Healthcare booking app · Saudi Arabia</span><span class="ar">تطبيق حجز مواعيد طبية · السعودية</span></div>
           <h3>Mawaeidk · مواعيدك — <span class="en"><em>making a booking app feel like care</em></span><span class="ar"><em>تطبيق حجز بإحساس الرعاية</em></span></h3>
         </div>
-        <p class="sum reveal"><span class="en">An app that lists healthcare providers and lets patients book in a few taps. I planned the monthly content, wrote the highlights, built the follower-growth and video ideas, and wrote the copy for provider-onboarding posts and an awareness reel for Breast Cancer Awareness Month.</span><span class="ar">تطبيق بيعرض مقدمي الخدمة الطبية وبيخلي المريض يحجز في كام ضغطة. خططت المحتوى الشهري، كتبت الهايلايتس، حطيت أفكار زيادة المتابعين والفيديوهات، وكتبت محتوى بوستات انضمام المراكز وريل توعوي لشهر التوعية بسرطان الثدي.</span></p>
+        <p class="sum reveal"><span class="en">An app that lists healthcare providers and lets patients book in a few taps. I planned the monthly content, wrote the highlights, built the follower-growth and video ideas, and wrote the copy for provider-onboarding posts and an awareness reel for Breast Cancer Awareness Month. In its first three months the accounts reached 2.29M views across Facebook, Instagram and TikTok.</span><span class="ar">تطبيق بيعرض مقدمي الخدمة الطبية وبيخلي المريض يحجز في كام ضغطة. خططت المحتوى الشهري، كتبت الهايلايتس، حطيت أفكار زيادة المتابعين والفيديوهات، وكتبت محتوى بوستات انضمام المراكز وريل توعوي لشهر التوعية بسرطان الثدي. وفي أول تلات شهور الحسابات وصلت لـ2.29 مليون مشاهدة على فيسبوك وإنستجرام وتيك توك.</span></p>
       </div>
       <div class="row4">
         <figure class="reveal"><div class="post"><img src="img/maw-1.webp" alt="Mawaeidk teaser post: coming soon to Qatar" width="900" height="1200" loading="lazy"></div><figcaption class="en">Teaser · market expansion</figcaption><figcaption class="ar">تيزر · التوسع في سوق جديد</figcaption></figure>
@@ -582,6 +622,38 @@ html[dir="rtl"] .mix i{transform-origin:right}
         <figure class="reveal"><div class="post"><img src="img/maw-3.webp" alt="Mawaeidk post: discounts from employers" width="900" height="1200" loading="lazy"></div><figcaption class="en">Benefit post · B2B angle</figcaption><figcaption class="ar">بوست ميزة · زاوية الشركات</figcaption></figure>
         <figure class="reveal"><div class="post"><img src="img/maw-4.webp" alt="Mawaeidk English app download post" width="900" height="1200" loading="lazy"></div><figcaption class="en">English download concept</figcaption><figcaption class="ar">فكرة تحميل بالإنجليزي</figcaption></figure>
       </div>
+
+      <div class="res big reveal" id="mawaeidk-results">
+        <div class="res-head">
+          <div><p class="eyebrow"><span class="en">Results · first 3 months</span><span class="ar">النتائج · أول 3 شهور</span></p>
+          <h4 style="margin-top:10px"><span class="en">Facebook, Instagram and TikTok</span><span class="ar">فيسبوك وإنستجرام وتيك توك</span></h4></div>
+          <span class="zero"><span class="en">3 platforms</span><span class="ar">3 منصات</span></span>
+        </div>
+        <div class="bighead" style="grid-template-columns:1fr">
+          <div class="hero-n">2.29M<small class="en">views across the three platforms (926.4K + 411.1K + 954.7K)</small><small class="ar">مشاهدة على التلات منصات (926.4K + 411.1K + 954.7K)</small></div>
+        </div>
+        <div class="plats">
+          <div><p class="plat">Facebook · <span class="en">organic + paid</span><span class="ar">أورجانيك + ممول</span></p><div class="pn">926.4K</div><p class="pl"><span class="en">views</span><span class="ar">مشاهدة</span></p>
+            <div class="rows"><div><span><span class="en">Viewers</span><span class="ar">مشاهد</span></span><b>240.9K</b></div><div><span><span class="en">Page visits</span><span class="ar">زيارات للصفحة</span></span><b>6.5K</b></div><div><span><span class="en">Link clicks</span><span class="ar">ضغطات على اللينك</span></span><b>3.9K</b></div><div><span><span class="en">Content interactions</span><span class="ar">تفاعل على المحتوى</span></span><b>389</b></div></div></div>
+          <div><p class="plat">Instagram</p><div class="pn">411.1K</div><p class="pl"><span class="en">views</span><span class="ar">مشاهدة</span></p>
+            <div class="rows"><div><span><span class="en">Reach</span><span class="ar">وصول</span></span><b>143K</b></div><div><span><span class="en">Content interactions</span><span class="ar">تفاعل على المحتوى</span></span><b>2.8K</b></div><div><span><span class="en">Link clicks</span><span class="ar">ضغطات على اللينك</span></span><b>2.4K</b></div><div><span><span class="en">Profile visits</span><span class="ar">زيارات للبروفايل</span></span><b>2.4K</b></div><div><span><span class="en">New follows</span><span class="ar">متابعات جديدة</span></span><b>214</b></div></div></div>
+          <div><p class="plat">TikTok · <span class="en">last 60 days</span><span class="ar">آخر 60 يوم</span></p><div class="pn">954.7K</div><p class="pl"><span class="en">video views</span><span class="ar">مشاهدة فيديو</span></p>
+            <div class="rows"><div><span><span class="en">Profile views</span><span class="ar">زيارات للبروفايل</span></span><b>3.1K</b></div><div><span><span class="en">Likes</span><span class="ar">إعجابات</span></span><b>1.8K</b></div><div><span><span class="en">Shares</span><span class="ar">مشاركات</span></span><b>72</b></div><div><span><span class="en">Comments</span><span class="ar">تعليقات</span></span><b>21</b></div></div></div>
+        </div>
+        <div class="callouts" style="margin-top:0">
+          <p><b class="en">6.3K link clicks</b><b class="ar">6.3 ألف ضغطة على اللينك</b> <span class="en">from Facebook (3.9K) and Instagram (2.4K) sent people towards booking in the app, which is the job of a booking app's social pages.</span><span class="ar">من فيسبوك (3.9 ألف) وإنستجرام (2.4 ألف) وجّهت الناس للحجز من التطبيق، ودي وظيفة صفحات تطبيق حجز أصلاً.</span></p>
+        </div>
+        <div class="proofgrid">
+          <figure class=""><div class="post"><img src="img/maw-fb-1.webp" alt="Meta insights, Mawaeidk Facebook: 926.4K views and 240.9K viewers" width="956" height="344" loading="lazy"></div></figure>
+          <figure class=""><div class="post"><img src="img/maw-fb-2.webp" alt="Meta insights, Mawaeidk Facebook: 389 content interactions and 3.9K link clicks" width="959" height="347" loading="lazy"></div></figure>
+          <figure class=""><div class="post"><img src="img/maw-fb-3.webp" alt="Meta insights, Mawaeidk Facebook: 6.5K visits and 10 follows" width="963" height="347" loading="lazy"></div></figure>
+          <figure class=""><div class="post"><img src="img/maw-ig-1.webp" alt="Meta insights, Mawaeidk Instagram: 411.1K views, 143K reach, 2.8K interactions, 2.4K link clicks" width="957" height="678" loading="lazy"></div></figure>
+          <figure class="span2"><div class="post"><img src="img/maw-ig-2.webp" alt="Meta insights, Mawaeidk Instagram: 2.4K profile visits and 214 follows" width="942" height="332" loading="lazy"></div></figure>
+                    <figure class="wide"><div class="post"><img src="img/maw-tt.webp" alt="TikTok Studio, Mawaeidk, last 60 days: 954.7K video views, 3.1K profile views, 1.8K likes, 21 comments, 72 shares" width="1645" height="215" loading="lazy"></div></figure>
+        </div>
+        <p class="note"><span class="en">Facebook and Instagram from Meta Business Suite (Aug 10 to early Nov 2026; Facebook organic and paid combined). TikTok from TikTok Studio, last 60 days. Platform growth percentages compare against the period before the accounts were active, so they are not shown.</span><span class="ar">فيسبوك وإنستجرام من Meta Business Suite (من 10 أغسطس لأوائل نوفمبر 2026؛ فيسبوك أورجانيك وممول مع بعض). تيك توك من TikTok Studio، آخر 60 يوم. نسب النمو اللي بتعرضها المنصات مقارنة بفترة قبل ما الحسابات تبدأ، علشان كده مش معروضة.</span></p>
+      </div>
+
     </article>
 
     <!-- C. Tasweeq -->
@@ -614,11 +686,41 @@ html[dir="rtl"] .mix i{transform-origin:right}
           <div class="idx"><b>04</b><span>Tasweeq</span><span class="en">Amazon seller services · Saudi Arabia</span><span class="ar">خدمات بائعي أمازون · السعودية</span></div>
           <h3>Easy List — <span class="en"><em>two months, two feeds</em></span><span class="ar"><em>شهرين، فيدين</em></span></h3>
         </div>
-        <p class="sum reveal"><span class="en">Easy List helps sellers list and grow on Amazon. October leaned on seasonal moments (October victory, Black Friday ads) and seller pain points like lost inventory and refunds. November moved to a cleaner blue-and-white system with a seven-slide carousel and alternating colour posts.</span><span class="ar">إيزي ليست بتساعد البائعين يعرضوا ويكبروا على أمازون. أكتوبر اعتمد على المواسم (نصر أكتوبر، إعلانات البلاك فرايداي) ومشاكل البائع زي المخزون الضايع واسترداد الفلوس. نوفمبر اتنقل لنظام أزرق وأبيض أنضف مع كاروسيل 7 سلايدز وتبديل الألوان بين البوستات.</span></p>
+        <p class="sum reveal"><span class="en">Easy List helps sellers list and grow on Amazon. October leaned on seasonal moments (October victory, Black Friday ads) and seller pain points like lost inventory and refunds. November moved to a cleaner blue-and-white system with a seven-slide carousel and alternating colour posts. Over three months the Facebook page reached 63.3K views and 1.2K new follows.</span><span class="ar">إيزي ليست بتساعد البائعين يعرضوا ويكبروا على أمازون. أكتوبر اعتمد على المواسم (نصر أكتوبر، إعلانات البلاك فرايداي) ومشاكل البائع زي المخزون الضايع واسترداد الفلوس. نوفمبر اتنقل لنظام أزرق وأبيض أنضف مع كاروسيل 7 سلايدز وتبديل الألوان بين البوستات. وفي تلات شهور صفحة فيسبوك وصلت لـ63.3 ألف مشاهدة و1.2 ألف متابعة جديدة.</span></p>
       </div>
       <div class="duo">
         <figure class="reveal"><span class="lab"><span class="en">October</span><span class="ar">أكتوبر</span></span><div class="post"><img src="img/easy-oct.webp" alt="Easy List October feed grid" width="1000" height="1250" loading="lazy"></div></figure>
         <figure class="reveal"><span class="lab"><span class="en">November</span><span class="ar">نوفمبر</span></span><div class="post"><img src="img/easy-nov.webp" alt="Easy List November feed preview" width="1000" height="1248" loading="lazy"></div></figure>
+      </div>
+
+      <div class="res alt reveal" id="easylist-results">
+        <div class="res-head">
+          <div><p class="eyebrow"><span class="en">Results · 3 months I managed</span><span class="ar">النتائج · 3 شهور مسكت فيهم الحساب</span></p>
+          <h4 style="margin-top:10px"><span class="en">Facebook page, Aug 10 – early Nov 2026</span><span class="ar">صفحة فيسبوك، من 10 أغسطس لأوائل نوفمبر 2026</span></h4></div>
+          <span class="zero">Facebook</span>
+        </div>
+        <div class="res-cols">
+          <div>
+            <div class="mgrid">
+              <div class="m hi"><b>63.3K</b><span class="en">views</span><span class="ar">مشاهدة</span></div>
+              <div class="m"><b>23.5K</b><span class="en">viewers</span><span class="ar">مشاهد</span></div>
+              <div class="m hi"><b>1.2K</b><span class="en">new follows</span><span class="ar">متابعة جديدة</span></div>
+              <div class="m hi"><b>694</b><span class="en">link clicks</span><span class="ar">ضغطة على اللينك</span></div>
+              <div class="m"><b>1K</b><span class="en">page visits</span><span class="ar">زيارة للصفحة</span></div>
+              <div class="m"><b>254</b><span class="en">content interactions</span><span class="ar">تفاعل على المحتوى</span></div>
+            </div>
+            <div class="callouts">
+              <p><b class="en">694 link clicks</b><b class="ar">694 ضغطة على اللينك</b> <span class="en">sent sellers from the page to Easy List, which is the action a B2B service page is for.</span><span class="ar">ودّت البائعين من الصفحة لإيزي ليست، ودي الخطوة اللي صفحة خدمة B2B معمولة علشانها.</span></p>
+              <p><b class="en">1.2K new follows</b><b class="ar">1.2 ألف متابعة جديدة</b> <span class="en">in three months for a niche service aimed at Amazon sellers.</span><span class="ar">في تلات شهور، لخدمة متخصصة موجهة لبائعي أمازون.</span></p>
+            </div>
+          </div>
+          <div class="stack">
+            <figure><div class="post"><img src="img/easy-fb-3.webp" alt="Meta insights for Easy List's Facebook page: 63.3K views and 23.5K viewers" width="961" height="342" loading="lazy"></div></figure>
+            <figure><div class="post"><img src="img/easy-fb-1.webp" alt="Meta insights for Easy List's Facebook page: 1K visits and 1.2K follows" width="953" height="355" loading="lazy"></div></figure>
+            <figure><div class="post"><img src="img/easy-fb-2.webp" alt="Meta insights for Easy List's Facebook page: 254 content interactions and 694 link clicks" width="956" height="347" loading="lazy"></div><figcaption class="en">Facebook · Meta Business Suite</figcaption><figcaption class="ar">فيسبوك · Meta Business Suite</figcaption></figure>
+          </div>
+        </div>
+        <p class="note"><span class="en">Meta Business Suite, Aug 10 to early Nov 2026. Meta's growth figures (e.g. +25.0K% views, +38.5K% follows) compare against an earlier period when the page had almost no activity, so the totals above are the meaningful numbers.</span><span class="ar">من Meta Business Suite، من 10 أغسطس لأوائل نوفمبر 2026. نسب النمو اللي بتعرضها ميتا (زي +25 ألف% مشاهدات و+38.5 ألف% متابعات) مقارنة بفترة قبلها الصفحة كان نشاطها شبه معدوم، علشان كده الأرقام الفعلية اللي فوق هي الأهم.</span></p>
       </div>
     </article>
 
@@ -727,8 +829,8 @@ html[dir="rtl"] .mix i{transform-origin:right}
     <div class="acc-grid">
       <div class="acc reveal"><div class="vis"><img src="img/ig-khashab.webp" alt="khashab_alud profile" width="480" height="886" loading="lazy"></div><div class="body"><span class="via">Heen</span><span class="handle">@khashab_alud</span><span class="aind"><span class="en">Oud &amp; perfume oils · KSA</span><span class="ar">دهن عود وعطور · السعودية</span></span><span class="ev"><span class="en">Monthly plans (months 5–8, Jan, Apr), captions, design briefs, competitor analysis.</span><span class="ar">خطط شهرية (5–8، يناير، أبريل)، كابشنز، بريفات تصميم، تحليل منافسين.</span></span><a class="open" href="https://www.instagram.com/khashab_alud" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
       <div class="acc reveal"><div class="vis"><img src="img/deraya-2.webp" alt="Deraya design" width="900" height="1200" loading="lazy"></div><div class="body"><span class="via"><span class="en">Freelance</span><span class="ar">فريلانس</span></span><span class="handle">@deraya_cloud</span><span class="aind"><span class="en">EdTech platform</span><span class="ar">منصة تعليمية</span></span><span class="ev"><span class="en">Built from zero: 57.7K Facebook views, 760 new follows and 13.0K Instagram views in 3 months.</span><span class="ar">من الصفر: 57.7 ألف مشاهدة على فيسبوك، 760 متابعة جديدة، و13 ألف مشاهدة على إنستجرام في 3 شهور.</span></span><a class="open" href="https://www.instagram.com/deraya_cloud" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
-      <div class="acc reveal"><div class="vis"><img src="img/maw-3.webp" alt="Mawaeidk design" width="900" height="1200" loading="lazy"></div><div class="body"><span class="via">Tasweeq</span><span class="handle">@mawaeidk</span><span class="aind"><span class="en">Healthcare booking app</span><span class="ar">تطبيق حجز طبي</span></span><span class="ev"><span class="en">Month-2 content plan, highlights, growth &amp; video ideas, awareness reel.</span><span class="ar">خطة محتوى الشهر التاني، هايلايتس، أفكار نمو وفيديو، ريل توعوي.</span></span><a class="open" href="https://www.instagram.com/mawaeidk" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
-      <div class="acc reveal"><div class="vis"><img src="img/easy-nov.webp" alt="Easy List feed" width="1000" height="1248" loading="lazy"></div><div class="body"><span class="via">Tasweeq</span><span class="handle">@easylist1</span><span class="aind"><span class="en">Amazon seller services</span><span class="ar">خدمات بائعي أمازون</span></span><span class="ev"><span class="en">October and November content plans, feed planning.</span><span class="ar">خطط محتوى أكتوبر ونوفمبر، تخطيط الفيد.</span></span><a class="open" href="https://www.instagram.com/easylist1" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
+      <div class="acc reveal"><div class="vis"><img src="img/maw-3.webp" alt="Mawaeidk design" width="900" height="1200" loading="lazy"></div><div class="body"><span class="via">Tasweeq</span><span class="handle">@mawaeidk</span><span class="aind"><span class="en">Healthcare booking app</span><span class="ar">تطبيق حجز طبي</span></span><span class="ev"><span class="en">First 3 months: 2.29M views across Facebook, Instagram and TikTok, and 6.3K link clicks.</span><span class="ar">أول 3 شهور: 2.29 مليون مشاهدة على فيسبوك وإنستجرام وتيك توك، و6.3 ألف ضغطة على اللينك.</span></span><a class="open" href="https://www.instagram.com/mawaeidk" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
+      <div class="acc reveal"><div class="vis"><img src="img/easy-nov.webp" alt="Easy List feed" width="1000" height="1248" loading="lazy"></div><div class="body"><span class="via">Tasweeq</span><span class="handle">@easylist1</span><span class="aind"><span class="en">Amazon seller services</span><span class="ar">خدمات بائعي أمازون</span></span><span class="ev"><span class="en">3 months on Facebook: 63.3K views, 1.2K new follows, 694 link clicks. Oct &amp; Nov content plans.</span><span class="ar">3 شهور على فيسبوك: 63.3 ألف مشاهدة، 1.2 ألف متابعة جديدة، 694 ضغطة على اللينك. خطط محتوى أكتوبر ونوفمبر.</span></span><a class="open" href="https://www.instagram.com/easylist1" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
       <div class="acc reveal"><div class="vis type"><p>تحفة<small>Tuhfa</small></p></div><div class="body"><span class="via">Heen</span><span class="handle">@tuhfa.fn</span><span class="aind"><span class="en">Retail · KSA</span><span class="ar">متجر · السعودية</span></span><span class="ev"><span class="en">Four monthly social media plans in the archive (incl. months 7 and 8).</span><span class="ar">أربع خطط سوشيال ميديا شهرية في الأرشيف (منها الشهر 7 و8).</span></span><a class="open" href="https://www.instagram.com/tuhfa.fn" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
       <div class="acc reveal"><div class="vis type"><p>كسوة<small>Lady's Kiswa</small></p></div><div class="body"><span class="via">Heen</span><span class="handle">@ladys_kswa_</span><span class="aind"><span class="en">Women's fashion · KSA</span><span class="ar">أزياء نسائية · السعودية</span></span><span class="ev"><span class="en">Monthly plans for months 3, 7, 8 and 9.</span><span class="ar">خطط شهرية للشهور 3 و7 و8 و9.</span></span><a class="open" href="https://www.instagram.com/ladys_kswa_" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
       <div class="acc reveal"><div class="vis type"><p>أرض النكهات<small>Ard Al Nakhat</small></p></div><div class="body"><span class="via">Heen</span><span class="handle">@ard_elnkahat</span><span class="aind"><span class="en">Food &amp; spices</span><span class="ar">أكل وتوابل</span></span><span class="ev"><span class="en">Video content plan.</span><span class="ar">خطة فيديوهات.</span></span><a class="open" href="https://www.instagram.com/ard_elnkahat" target="_blank" rel="noopener"><span class="en">Open account ↗</span><span class="ar">افتح الحساب ↗</span></a></div></div>
@@ -913,7 +1015,7 @@ html[dir="rtl"] .mix i{transform-origin:right}
       <div class="reveal"><h3><span class="en">I plan before I post</span><span class="ar">بخطط قبل ما أنشر</span></h3><p><span class="en">Competitor research and a clear position come first, as in the ReValue and Saree3 plans.</span><span class="ar">بحث المنافسين وتموضع واضح بييجوا الأول، زي خطط ريفاليو وسارع.</span></p></div>
       <div class="reveal"><h3><span class="en">I write in your customer's voice</span><span class="ar">بكتب بصوت عميلك</span></h3><p><span class="en">Saudi dialect for Khashab Al Oud, Egyptian for local clinics, English for app launches.</span><span class="ar">سعودي لخشب العود، مصري للعيادات المحلية، إنجليزي لإطلاق التطبيقات.</span></p></div>
       <div class="reveal"><h3><span class="en">I handle volume without losing quality</span><span class="ar">بشيل حجم شغل كبير من غير ما الجودة تقل</span></h3><p><span class="en">30–40 accounts at once at Heen, each with its own monthly plan.</span><span class="ar">30–40 حساب في نفس الوقت في هين، كل واحد له خطته الشهرية.</span></p></div>
-      <div class="reveal"><h3><span class="en">I read the numbers</span><span class="ar">بقرا الأرقام</span></h3><p><span class="en">A statistics degree, weekly reports, and results I can show, like Deraya’s first three months.</span><span class="ar">دراسة إحصاء، وتقارير أسبوعية، ونتايج أقدر أوريها زي أول تلات شهور لدِراية.</span></p></div>
+      <div class="reveal"><h3><span class="en">I read the numbers</span><span class="ar">بقرا الأرقام</span></h3><p><span class="en">A statistics degree, weekly reports, and results I can show, like the first three months of Mawaeidk, Deraya and Easy List.</span><span class="ar">دراسة إحصاء، وتقارير أسبوعية، ونتايج أقدر أوريها زي أول تلات شهور لمواعيدك ودِراية وإيزي ليست.</span></p></div>
     </div>
   </section>
 
